@@ -28,30 +28,15 @@ The dataset contains demographic and health-related information of patients, wit
 
 ## 🧼 Data Cleaning Steps
 
-### 1. Import Dependencies
-
-> _Insert code here to import `pandas`, `numpy`, `seaborn`, etc._
-
-```python
-## Your code here 
-
-```
-
-### 2. Load Dataset
-
-### 3. Inspect Missing Values
-
-### 4. Drop or Impute Missing BMI Values
-
-### 5. Standardize Categorical Values
-
-### 6. Encode Categorical Variables
-
-### 7. Check for Duplicates
-
-### 8. Outlier Detection and Treatment
-
-### 9. Final Dataset Summary
+### 1.1 Import Dependencies
+### 1.2 Dataset Attributes
+### 1.3 Standardize Categorical Values
+### 1.4 Inspecting Missing Values
+### 1.5 Replacing the Missing Values
+### 1.6 Categorizing the data in different types
+### 1.7 Duplicate Check in Dataset
+### 1.8 Outlier Detection
+### 1.9 Treatment of Outliers
 
 ## 💾 Export Cleaned Data
 
