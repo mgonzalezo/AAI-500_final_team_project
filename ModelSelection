@@ -1,0 +1,27 @@
+Logistic Regression
+Why Logistic Regression?
+1.Binary Outcome: Your target variable stroke is binary (0 = no stroke, 1 = stroke), which is the classic scenario for logistic regression.
+
+2.Explanatory Variables: The dataset includes both categorical (e.g., gender, work_type, smoking_status) and continuous (e.g., age, avg_glucose_level, bmi) predictors. Logistic regression handles both well using appropriate coding (e.g., dummy variables).
+
+3.Interpretability: Logistic regression provides interpretable coefficients (odds ratios), which is especially important in medical applications like stroke prediction.
+
+4.Statistical Foundation: As the book shows, logistic regression belongs to the family of Generalized Linear Models (GLMs), and is the canonical model for binary response variables.
+
+5.Robustness: It does not assume normality of predictors, unlike linear discriminant analysis
+
+
+While logistic regression is a strong starting point, it's important to be aware of certain challenges:
+
+Class Imbalance: The dataset has significantly more instances of non-stroke cases than stroke cases. This imbalance can affect model performance. Techniques like SMOTE (Synthetic Minority Over-sampling Technique) can be used to address this issue.
+
+Model Performance: Studies have shown that while logistic regression performs well, more complex models like Random Forests or ensemble methods can achieve higher accuracy. For instance, a study reported that Random Forest achieved an accuracy of 96% in stroke prediction
+
+
+Logistic regression allows you to build a strong understanding of model building and evaluation. As you become more comfortable, you can explore more complex models:
+
+Random Forests: These can capture nonlinear relationships and interactions between variables.
+
+Gradient Boosting Machines (e.g., XGBoost, LightGBM): These often provide high accuracy and are widely used in machine learning competitions.
+
+Neural Networks: These can model complex patterns but require more data and computational resources.
