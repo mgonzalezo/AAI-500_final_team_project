@@ -29,14 +29,61 @@ The dataset contains demographic and health-related information of patients, wit
 ## 🧼 Data Cleaning Steps
 
 ### 1.1 Import Dependencies
+
+* **Summary:** Importing all the necessary programming libaries and modules for efficient data manipulation
+* **Outcome:** Getting the dataset available for initial inspection and all subsequent cleaning, transformation and analysis
+
 ### 1.2 Dataset Attributes
+
+* **Summary:** Checking out the different dataset variables
+      * Inspecting all the columns and understanding the data types assigned to each feature (e.g., integer, float, object) and getting clarity of dataset
+      * Identifying potential data issues
+      * Preparing strategy for the subsequest data cleaning and preprocessing steps
+  
 ### 1.3 Standardize Categorical Values
+
+* **Summary:** Focuses on ensuring uniformity within the categorical features, which often has inconsistent data entry. For example, variations like "Male", "male", "MALE" or "M" or "NAN".  
+      * Final goal is to have consistent value so that statistical analyses doesn't misinterpret the slight variation.
+      * This helps in accurate counting, filtering, and encoding of categorical variables, significantly improving the integrity and reliability.
+  
 ### 1.4 Inspecting Missing Values
+
+* **Summary:** Involves identification and quantifying all the missing data points across entire dataset.
+      * Finding what needs to be done with the missing, replace, deletion of the row entirely.
+      * The detailed inspection is critical for making informed decision.
+  
 ### 1.5 Replacing the Missing Values
+
+* **Summary:** Once the missing value have been accurately identified we can apply different methods to fill those gaps.
+      * Common methods used to replace missing values is generally to delete the rows.
+      * As this will cause the final result to change if the rows are deleted.
+      * Using mean, median, mode to replace the missing values and here we are using mean to replace the values are the mean and median are very similar.
+  
 ### 1.6 Categorizing the data in different types
+
+* **Summary:** Effective categorization is essential for data management and processing. The data is categorized into 3 types here
+      * Categorical, Binary Numerical, Continous Numerical to identify data.
+      * Once the data is separated into these categories we can move certain columns into different types from there original type.
+      * Like gender, ever_married, from categorical to Binary Numerical.
+  
 ### 1.7 Duplicate Check in Dataset
+
+* **Summary:** This crucial step is dedicated to proactively identifying and effectively managing any redundant or identical rows that may exist within the dataset. Methods like df.duplicated().sum() are used to count them.
+
 ### 1.8 Outlier Detection
+
+* **Summary:** Outliers can arise from various sources, and they can have potential impact
+      * Finding correlation between high, low and weak pairs.
+      * KDE and Histogram inteference
+  
 ### 1.9 Treatment of Outliers
+
+* **Summary:** Categorical labels are often more intuitive and user-friendly for human understanding than precise numerical ranges.
+      * The specific strategy adopted here for handling outliers is binning, which was judiciously applied to the continuous numerical features: bmi, avg_glucose_level, and age. This transformation converts continuous data into discrete, ordered categories.
+      * bmi was grouped into categories like 'Underweight', 'Ideal', 'Overweight', and 'Obesity'.
+      * age was categorized into 'Children', 'Teens', 'Adults', 'Mid Adults', and 'Elderly'.
+      * avg_glucose_level was binned into 'Low', 'Normal', 'High', and 'Very High'.
+
 
 ## 💾 Explore Data
 
