@@ -142,6 +142,94 @@ This document summarizes the key statistical exploration steps performed on the 
     * A credible interval (the Bayesian equivalent of a confidence interval) is calculated from the posterior distribution.
     * The prior and posterior distributions are plotted to visualize how beliefs about the stroke probability are updated by the data.
 
-## ✅ Ready for ML
+## Stroke Prediction: Model Selection and Evaluation
+
+This section outlines the process of selecting, building, and evaluating a machine learning model for the stroke prediction dataset. We begin with a justification for our initial model choice, logistic regression, and then detail a systematic approach to compare multiple models and select the best performer.
+
+---
+
+## Initial Model Choice: Logistic Regression
+
+For the initial analysis of the stroke prediction dataset, **Logistic Regression** was chosen as the primary model. This decision is based on several key characteristics of the data and the modeling goals.
+
+### Why Logistic Regression?
+
+- **Binary Outcome**:  
+  The target variable, `stroke`, is binary (`0` for no stroke, `1` for stroke). Logistic regression is a statistical method specifically designed to model the probability of such binary outcomes.
+
+- **Handles Mixed Data Types**:  
+  The dataset contains both continuous (e.g., `age`, `avg_glucose_level`) and categorical (e.g., `gender`, `work_type`) predictors. Logistic regression can effectively handle both types of variables with appropriate preprocessing, such as one-hot encoding for categorical features.
+
+- **High Interpretability**:  
+  A major advantage of logistic regression is its interpretability. The model's coefficients can be translated into odds ratios, providing clear insights into how each variable influences the likelihood of a stroke. This is especially valuable in a medical context where understanding risk factors is crucial.
+
+- **Strong Statistical Foundation**:  
+  As a type of Generalized Linear Model (GLM), logistic regression is a well-established and robust statistical method. It does not assume normality of predictors, making it more flexible than some other models like Linear Discriminant Analysis.
+
+- **Implementation Efficiency**:  
+  Logistic regression is computationally efficient and widely available in standard data science libraries like Scikit-learn (Python) and R, making it a practical and accessible baseline model.
+
+### Potential Challenges
+
+- **Class Imbalance**:  
+  The dataset is highly imbalanced, with far fewer instances of strokes than non-strokes. This can bias the model towards the majority class. Techniques like **SMOTE** (Synthetic Minority Over-sampling Technique) or adjusting class weights are necessary to mitigate this issue.
+
+- **Linearity Assumption**:  
+  Logistic regression assumes a linear relationship between the predictor variables and the log-odds of the outcome. More complex models like Random Forests or Gradient Boosting might capture non-linear relationships and interactions more effectively, potentially leading to higher accuracy.
+
+---
+
+## Systematic Model Selection Process
+
+To ensure we select the most effective model, we will follow a structured process to train, evaluate, and compare several classification algorithms.
+
+### Step 1: Understand and Preprocess the Data
+
+- **Analyze Variables**: Identify the data type (categorical, numerical, binary) for each feature.
+- **Handle Missing Values**: Implement a strategy for missing data, such as imputation for the `bmi` column.
+- **Encode Categorical Variables**: Convert categorical features (e.g., `gender`, `smoking_status`) into a numerical format using one-hot encoding.
+- **Scale Numerical Features**: Normalize or standardize numerical variables (`age`, `avg_glucose_level`, `bmi`) to ensure they are on a comparable scale, which is important for models like SVM and k-NN.
+
+### Step 2: Split the Dataset
+
+Divide the data into a **training set (70%)** and a **testing set (30%)**. This allows the model to be evaluated on unseen data, providing a more realistic measure of its performance.
+
+### Step 3: Address Class Imbalance
+
+Apply a resampling technique to the training data only to prevent data leakage. **SMOTE** is a recommended approach to generate synthetic samples for the minority class (stroke cases).
+
+### Step 4: Train and Evaluate Multiple Models
+
+- Train a variety of classification models on the preprocessed and resampled training data.
+- Use **5-fold or 10-fold cross-validation** during training to get a more robust estimate of performance.
+- Evaluate each model on the held-out test set using a standard set of classification metrics.
+
+### Step 5: Compare Model Performance
+
+The performance of each model will be compiled into a comparison table. The primary metrics for evaluation are:
+
+- **Accuracy**: Overall percentage of correct predictions.
+- **Precision**: Of the predicted strokes, how many were actual strokes? (Measures correctness of positive predictions).
+- **Recall (Sensitivity)**: Of all the actual strokes, how many did the model detect? (Measures completeness).
+- **F1-Score**: The harmonic mean of Precision and Recall, providing a single score that balances both.
+- **ROC-AUC Score**: The area under the Receiver Operating Characteristic curve, which measures the model's ability to distinguish between the two classes.
+
+#### Model Performance Comparison Table
+
+| Model                | Accuracy | Precision | Recall / Sensitivity | F1-Score | ROC-AUC Score |
+|---------------------|----------|-----------|-----------------------|----------|----------------|
+| Logistic Regression | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| Naive Bayes         | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| Decision Tree       | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| Support Vector Machine | TBD   | TBD       | TBD                   | TBD      | TBD            |
+| Random Forest       | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| k-Nearest Neighbors | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| XGBoost             | TBD      | TBD       | TBD                   | TBD      | TBD            |
+
+### Step 6: Final Model Selection
+
+The best model will be chosen based on a balance of performance metrics, with a particular focus on **Recall** and **ROC-AUC**, as failing to detect a stroke (a false negative) is more critical than a false positive in this context.
+
+Interpretability and computational cost will also be considered in the final decision.
 
 ## 📎 Notes
