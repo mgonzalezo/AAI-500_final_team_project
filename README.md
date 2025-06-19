@@ -1,6 +1,42 @@
 # AAI-500_final_team_project
 University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
 
+# AAI-500_final_team_project
+University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
+
+## 📑 Table of Contents
+
+- **🧠 [Stroke Prediction Dataset - Data Cleaning Pipeline](#-stroke-prediction-dataset---data-cleaning-pipeline)**
+  - [1.1 Import Dependencies](#11-import-dependencies)
+  - [1.2 Dataset Attributes](#12-dataset-attributes)
+  - [1.3 Standardize Categorical Values](#13-standardize-categorical-values)
+  - [1.4 Inspecting Missing Values](#14-inspecting-missing-values)
+  - [1.5 Replacing the Missing Values](#15-replacing-the-missing-values)
+  - [1.6 Categorizing the data in different types](#16-categorizing-the-data-in-different-types)
+  - [1.7 Duplicate Check in Dataset](#17-duplicate-check-in-dataset)
+  - [1.8 Outlier Detection](#18-outlier-detection)
+  - [1.9 Treatment of Outliers](#19-treatment-of-outliers)
+
+- **💾 [Explore Data](#-explore-data)**
+  - [1. Sampling Distributions](#1-sampling-distributions)
+  - [2. The Central Limit Theorem (CLT)](#2-the-central-limit-theorem-clt)
+  - [3. Methods of Estimation](#3-methods-of-estimation)
+  - [4. Confidence Intervals (CIs)](#4-confidence-intervals-cis)
+  - [5. The Bootstrap](#5-the-bootstrap)
+  - [6. Bayesian Approach (Conceptual Example)](#6-bayesian-approach-conceptual-example)
+
+- **🔍📊⚙️ [Systematic Model Selection Process](#-systematic-model-selection-process)**
+  - [Step 1: Understand and Preprocess the Data](#step-1-understand-and-preprocess-the-data)
+  - [Step 2: Split the Dataset](#step-2-split-the-dataset)
+  - [Step 3: Address Class Imbalance](#step-3-address-class-imbalance)
+  - [Step 4: Train and Evaluate Multiple Models](#step-4-train-and-evaluate-multiple-models)
+  - [Step 5: Compare Model Performance](#step-5-compare-model-performance)
+  - [Step 6: Final Model Selection](#step-6-final-model-selection)
+  - [Model Choice: Logistic Regression](#model-choice-logistic-regression)
+
+- **📎 [Reference](#-reference)**
+  - [Links](#links)
+
 
 # 🧠 Stroke Prediction Dataset - Data Cleaning Pipeline
 
@@ -26,7 +62,7 @@ The dataset contains demographic and health-related information of patients, wit
 
 ---
 
-## 🧼 Data Cleaning Steps
+# 🧼 Data Cleaning Steps
 
 ### 1.1 Import Dependencies
 
@@ -85,7 +121,7 @@ The dataset contains demographic and health-related information of patients, wit
       * avg_glucose_level was binned into 'Low', 'Normal', 'High', and 'Very High'.
 
 
-## 💾 Explore Data
+# 💾 Explore Data
 
 # Exploratory Data Analysis (EDA) Steps for Stroke Prediction Dataset
 
@@ -148,38 +184,8 @@ This section outlines the process of selecting, building, and evaluating a machi
 
 ---
 
-## Initial Model Choice: Logistic Regression
 
-For the initial analysis of the stroke prediction dataset, **Logistic Regression** was chosen as the primary model. This decision is based on several key characteristics of the data and the modeling goals.
-
-### Why Logistic Regression?
-
-- **Binary Outcome**:  
-  The target variable, `stroke`, is binary (`0` for no stroke, `1` for stroke). Logistic regression is a statistical method specifically designed to model the probability of such binary outcomes.
-
-- **Handles Mixed Data Types**:  
-  The dataset contains both continuous (e.g., `age`, `avg_glucose_level`) and categorical (e.g., `gender`, `work_type`) predictors. Logistic regression can effectively handle both types of variables with appropriate preprocessing, such as one-hot encoding for categorical features.
-
-- **High Interpretability**:  
-  A major advantage of logistic regression is its interpretability. The model's coefficients can be translated into odds ratios, providing clear insights into how each variable influences the likelihood of a stroke. This is especially valuable in a medical context where understanding risk factors is crucial.
-
-- **Strong Statistical Foundation**:  
-  As a type of Generalized Linear Model (GLM), logistic regression is a well-established and robust statistical method. It does not assume normality of predictors, making it more flexible than some other models like Linear Discriminant Analysis.
-
-- **Implementation Efficiency**:  
-  Logistic regression is computationally efficient and widely available in standard data science libraries like Scikit-learn (Python) and R, making it a practical and accessible baseline model.
-
-### Potential Challenges
-
-- **Class Imbalance**:  
-  The dataset is highly imbalanced, with far fewer instances of strokes than non-strokes. This can bias the model towards the majority class. Techniques like **SMOTE** (Synthetic Minority Over-sampling Technique) or adjusting class weights are necessary to mitigate this issue.
-
-- **Linearity Assumption**:  
-  Logistic regression assumes a linear relationship between the predictor variables and the log-odds of the outcome. More complex models like Random Forests or Gradient Boosting might capture non-linear relationships and interactions more effectively, potentially leading to higher accuracy.
-
----
-
-## Systematic Model Selection Process
+# 🔍📊⚙️Systematic Model Selection Process
 
 To ensure we select the most effective model, we will follow a structured process to train, evaluate, and compare several classification algorithms.
 
@@ -216,15 +222,16 @@ The performance of each model will be compiled into a comparison table. The prim
 
 #### Model Performance Comparison Table
 
-| Model                | Accuracy | Precision | Recall / Sensitivity | F1-Score | ROC-AUC Score |
-|---------------------|----------|-----------|-----------------------|----------|----------------|
-| Logistic Regression | TBD      | TBD       | TBD                   | TBD      | TBD            |
-| Naive Bayes         | TBD      | TBD       | TBD                   | TBD      | TBD            |
-| Decision Tree       | TBD      | TBD       | TBD                   | TBD      | TBD            |
-| Support Vector Machine | TBD   | TBD       | TBD                   | TBD      | TBD            |
-| Random Forest       | TBD      | TBD       | TBD                   | TBD      | TBD            |
-| k-Nearest Neighbors | TBD      | TBD       | TBD                   | TBD      | TBD            |
-| XGBoost             | TBD      | TBD       | TBD                   | TBD      | TBD            |
+| Model                    | Accuracy (%) | Precision | Recall / Sensitivity | F1-Score | ROC-AUC Score |
+|--------------------------|--------------|-----------|-----------------------|----------|----------------|
+| Logistic Regression      | TBD          | TBD       | TBD                   | TBD      | TBD            |
+| Naive Bayes              | TBD          | TBD       | TBD                   | TBD      | TBD            |
+| Decision Tree            | TBD          | TBD       | TBD                   | TBD      | TBD            |
+| Support Vector Machine   | 81.21        | 0.1306    | 0.5057                | 0.2075   | 0.7818         |
+| Random Forest            | 92.95        | 0.1100    | 0.0632                | 0.0803   | 0.7697         |
+| k-Nearest Neighbors      | 80.43        | 0.1015    | 0.3851                | 0.1607   | 0.6583         |
+| XGBoost                  | TBD          | TBD       | TBD                   | TBD      | TBD            |
+
 
 ### Step 6: Final Model Selection
 
@@ -232,4 +239,44 @@ The best model will be chosen based on a balance of performance metrics, with a 
 
 Interpretability and computational cost will also be considered in the final decision.
 
-## 📎 Notes
+## Model Choice: Logistic Regression
+
+For the initial analysis of the stroke prediction dataset, **Logistic Regression** was chosen as the primary model. This decision is based on several key characteristics of the data and the modeling goals.
+
+### Why Logistic Regression?
+
+- **Binary Outcome**:  
+  The target variable, `stroke`, is binary (`0` for no stroke, `1` for stroke). Logistic regression is a statistical method specifically designed to model the probability of such binary outcomes.
+
+- **Handles Mixed Data Types**:  
+  The dataset contains both continuous (e.g., `age`, `avg_glucose_level`) and categorical (e.g., `gender`, `work_type`) predictors. Logistic regression can effectively handle both types of variables with appropriate preprocessing, such as one-hot encoding for categorical features.
+
+- **High Interpretability**:  
+  A major advantage of logistic regression is its interpretability. The model's coefficients can be translated into odds ratios, providing clear insights into how each variable influences the likelihood of a stroke. This is especially valuable in a medical context where understanding risk factors is crucial.
+
+- **Strong Statistical Foundation**:  
+  As a type of Generalized Linear Model (GLM), logistic regression is a well-established and robust statistical method. It does not assume normality of predictors, making it more flexible than some other models like Linear Discriminant Analysis.
+
+- **Implementation Efficiency**:  
+  Logistic regression is computationally efficient and widely available in standard data science libraries like Scikit-learn (Python) and R, making it a practical and accessible baseline model.
+
+### Potential Challenges
+
+- **Class Imbalance**:  
+  The dataset is highly imbalanced, with far fewer instances of strokes than non-strokes. This can bias the model towards the majority class. Techniques like **SMOTE** (Synthetic Minority Over-sampling Technique) or adjusting class weights are necessary to mitigate this issue.
+
+- **Linearity Assumption**:  
+  Logistic regression assumes a linear relationship between the predictor variables and the log-odds of the outcome. More complex models like Random Forests or Gradient Boosting might capture non-linear relationships and interactions more effectively, potentially leading to higher accuracy.
+
+
+# 📎 Reference
+
+## Links
+
+Orduz, J. C. (2020, May 5). Getting started with spectral clustering. KDnuggets. https://www.kdnuggets.com/2020/05/getting-started-spectral-clustering.html  
+
+Deshpande, T. (n.d.). Stroke prediction: Effect of data leakage | SMOTE. Kaggle. Retrieved from https://www.kaggle.com/code/tanmay111999/stroke-prediction-effect-of-data-leakage-smote  
+
+Joshua's Words. (n.d.). Predicting a stroke [SHAP, LIME Explainer & ELI5]. Kaggle. Retrieved from https://www.kaggle.com/code/joshuaswords/predicting-a-stroke-shap-lime-explainer-eli5  
+
+Chennoju, B. (n.d.). Data storytelling AUC focus on strokes. Kaggle. Retrieved from https://www.kaggle.com/code/bhuvanchennoju/data-storytelling-auc-focus-on-strokes
