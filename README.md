@@ -230,8 +230,6 @@ The performance of each model will be compiled into a comparison table. The prim
 | Support Vector Machine   | 81.21        | 0.1306    | 0.5057                | 0.2075   | 0.7818         |
 | Random Forest            | 92.95        | 0.1100    | 0.0632                | 0.0803   | 0.7697         |
 | k-Nearest Neighbors      | 80.43        | 0.1015    | 0.3851                | 0.1607   | 0.6583         |
-| XGBoost                  | TBD          | TBD       | TBD                   | TBD      | TBD            |
-
 
 ### Step 6: Final Model Selection
 
