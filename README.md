@@ -128,6 +128,61 @@ The dataset contains demographic and health-related information of patients, wit
 This document summarizes the key statistical exploration steps performed on the stroke prediction dataset. Each section corresponds to a part of the analysis script.
 
 
+# Exploratory Data Analysis of Stroke Prediction Dataset
+
+## Overview
+
+This project performs an in-depth Exploratory Data Analysis (EDA) on the "Stroke Prediction Dataset" from Kaggle. The goal is to uncover patterns, identify key risk factors, and visualize the relationships between various patient attributes and the likelihood of experiencing a stroke. The analysis is conducted using a modular Python script that generates a series of insightful visualizations.
+
+
+## Analysis Sections & Key Insights
+
+The analysis is broken down into several key visualizations, each designed to answer a specific question about the data.
+
+### 1. Distribution of Numerical Features
+
+* **Analysis:** Compared the distributions of `age`, `avg_glucose_level`, and `bmi` for patients who had a stroke versus those who did not, using Kernel Density Estimate (KDE) plots.
+* **Insights:**
+    * **Age:** The distribution for stroke patients is significantly shifted towards older ages. Age appears to be a dominant factor.
+    * **Glucose Level:** Stroke patients tend to have higher average glucose levels.
+    * **BMI:** The relationship with BMI is less distinct, though there is a slight tendency for stroke patients to have a higher BMI.
+
+### 2. Distribution of Categorical Features
+
+* **Analysis:** Visualized the percentage of stroke occurrences within each category for features like `hypertension`, `heart_disease`, and `smoking_status`.
+* **Insights:**
+    * **Hypertension & Heart Disease:** Patients with a history of these conditions have a dramatically higher percentage of stroke cases. They are critical risk indicators.
+    * **Smoking Status:** Formerly smoked and currently smoking individuals show a higher stroke incidence compared to those who have never smoked.
+
+### 3. Correlation Analysis
+
+* **Analysis:** A heatmap was generated to show the linear correlation between numerical variables and key binary factors (`stroke`, `hypertension`, `heart_disease`).
+* **Insights:**
+    * `age` has the strongest positive correlation with `stroke` among all numerical features.
+    * `hypertension` and `heart_disease` also show a notable positive correlation with `stroke`.
+
+### 4. Stroke Risk by Age
+
+* **Analysis:** A line plot was created to show the calculated stroke rate for each age.
+* **Insights:**
+    * The plot reveals a clear, steep, and continuous increase in stroke risk directly corresponding with an increase in age. The risk accelerates significantly after the age of 50.
+
+### 5. Age vs. Glucose/BMI Regression
+
+* **Analysis:** Stacked regression plots were used to visualize the relationship between age and both `avg_glucose_level` and `bmi`.
+* **Insights:**
+    * The most striking feature of these plots is the clustering of stroke patients (dark blue dots) on the right side of the graph, representing older ages.
+    * This confirms that while glucose and BMI are relevant, age remains the primary condition under which strokes are observed in this dataset.
+
+## Summary of Findings
+
+The comprehensive EDA points to a clear profile of a high-risk individual:
+* **Primary Factor:** Advanced age.
+* **Critical Co-morbidities:** History of hypertension and/or heart disease.
+* **Contributing Factors:** Elevated blood glucose levels and a history of smoking.
+
+These insights are crucial for building predictive models and developing targeted public health strategies for stroke prevention.
+
 
 ## Stroke Prediction: Model Selection and Evaluation
 
