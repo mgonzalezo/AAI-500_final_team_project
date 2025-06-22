@@ -1,9 +1,6 @@
 # AAI-500_final_team_project
 University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
 
-# AAI-500_final_team_project
-University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
-
 ## 📑 Table of Contents
 
 - **🧠 [Stroke Prediction Dataset - Data Cleaning Pipeline](#-stroke-prediction-dataset---data-cleaning-pipeline)**
