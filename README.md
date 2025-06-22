@@ -18,12 +18,13 @@ University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
   - [1.9 Treatment of Outliers](#19-treatment-of-outliers)
 
 - **💾 [Explore Data](#-explore-data)**
-  - [1. Sampling Distributions](#1-sampling-distributions)
-  - [2. The Central Limit Theorem (CLT)](#2-the-central-limit-theorem-clt)
-  - [3. Methods of Estimation](#3-methods-of-estimation)
-  - [4. Confidence Intervals (CIs)](#4-confidence-intervals-cis)
-  - [5. The Bootstrap](#5-the-bootstrap)
-  - [6. Bayesian Approach (Conceptual Example)](#6-bayesian-approach-conceptual-example)
+- [Analysis Sections & Key Insights](#analysis-sections--key-insights)
+  - [1. Distribution of Numerical Features](#1-distribution-of-numerical-features)
+  - [2. Distribution of Categorical Features](#2-distribution-of-categorical-features)
+  - [3. Correlation Analysis](#3-correlation-analysis)
+  - [4. Stroke Risk by Age](#4-stroke-risk-by-age)
+  - [5. Age vs. Glucose/BMI Regression](#5-age-vs-glucosebmi-regression)
+- [Summary of Findings](#summary-of-findings)
 
 - **🔍📊⚙️ [Systematic Model Selection Process](#-systematic-model-selection-process)**
   - [Step 1: Understand and Preprocess the Data](#step-1-understand-and-preprocess-the-data)
