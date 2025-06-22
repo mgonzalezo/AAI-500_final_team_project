@@ -128,14 +128,6 @@ The dataset contains demographic and health-related information of patients, wit
 
 This document summarizes the key statistical exploration steps performed on the stroke prediction dataset. Each section corresponds to a part of the analysis script.
 
-
-# Exploratory Data Analysis of Stroke Prediction Dataset
-
-## Overview
-
-This project performs an in-depth Exploratory Data Analysis (EDA) on the "Stroke Prediction Dataset" from Kaggle. The goal is to uncover patterns, identify key risk factors, and visualize the relationships between various patient attributes and the likelihood of experiencing a stroke. The analysis is conducted using a modular Python script that generates a series of insightful visualizations.
-
-
 ## Analysis Sections & Key Insights
 
 The analysis is broken down into several key visualizations, each designed to answer a specific question about the data.
