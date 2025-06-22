@@ -18,13 +18,13 @@ University of San Diego AAI-500 Final team project - Stroke Prediction Dataset
   - [1.9 Treatment of Outliers](#19-treatment-of-outliers)
 
 - **💾 [Explore Data](#-explore-data)**
-- [Analysis Sections & Key Insights](#analysis-sections--key-insights)
-  - [1. Distribution of Numerical Features](#1-distribution-of-numerical-features)
-  - [2. Distribution of Categorical Features](#2-distribution-of-categorical-features)
-  - [3. Correlation Analysis](#3-correlation-analysis)
-  - [4. Stroke Risk by Age](#4-stroke-risk-by-age)
-  - [5. Age vs. Glucose/BMI Regression](#5-age-vs-glucosebmi-regression)
-- [Summary of Findings](#summary-of-findings)
+  - [Analysis Sections & Key Insights](#analysis-sections--key-insights)
+    - [1. Distribution of Numerical Features](#1-distribution-of-numerical-features)
+    - [2. Distribution of Categorical Features](#2-distribution-of-categorical-features)
+    - [3. Correlation Analysis](#3-correlation-analysis)
+    - [4. Stroke Risk by Age](#4-stroke-risk-by-age)
+    - [5. Age vs. Glucose/BMI Regression](#5-age-vs-glucosebmi-regression)
+  - [Summary of Findings](#summary-of-findings)
 
 - **🔍📊⚙️ [Systematic Model Selection Process](#-systematic-model-selection-process)**
   - [Step 1: Understand and Preprocess the Data](#step-1-understand-and-preprocess-the-data)
