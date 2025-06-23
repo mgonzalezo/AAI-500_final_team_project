@@ -221,7 +221,7 @@ The performance of each model will be compiled into a comparison table. The prim
 | Model                    | Accuracy (%) | Precision | Recall / Sensitivity | F1-Score | ROC-AUC Score |
 |--------------------------|--------------|-----------|-----------------------|----------|----------------|
 | Logistic Regression      | 95.00        | 0.95      | 1.00                  | 0.9732   | 0.8361         |
-| Naive Bayes              | 56.75        | 0.99      | 0.55                  | 0.7123   | 0.8021         |
+| Naive Bayes              | 55.12        | 0.99      | 0.54                  | 0.7023   | 0.5521         |
 | Decision Tree            | 92.56        | 0.96      | 0.970                 | 0.9601   | 0.5530         |
 | Support Vector Machine   | 81.21        | 0.1306    | 0.5057                | 0.2075   | 0.7818         |
 | Random Forest            | 92.95        | 0.1100    | 0.0632                | 0.0803   | 0.7697         |
